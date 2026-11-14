@@ -180,8 +180,7 @@ img {
 
 .hero h1::before,
 .section-intro h2::before,
-.article-header h1::before,
-.article-body h2::before {
+.article-header h1::before {
   display: block;
   width: 2.4rem;
   height: 3px;
@@ -232,22 +231,30 @@ img {
   font-size: 1rem;
 }
 
-.key-statement {
+.key-statement,
+.article-body h2 {
   position: relative;
   padding-inline-start: .85rem;
+}
+
+.key-statement {
   color: var(--ink);
   font-weight: 550;
 }
 
-.key-statement::before {
+.key-statement::before,
+.article-body h2::before {
   position: absolute;
-  inset-block-start: .3em;
   inset-inline-start: 0;
   width: 3px;
-  height: 1.16em;
   border-radius: 2px;
   background: var(--accent);
   content: "";
+}
+
+.key-statement::before {
+  inset-block-start: .3em;
+  height: 1.16em;
 }
 
 .button-link {
@@ -372,6 +379,13 @@ img {
 .project-card-copy > p:last-of-type {
   color: var(--body);
   font-size: .975rem;
+}
+
+.project-card-copy > .project-period {
+  margin-bottom: .45rem;
+  color: var(--muted);
+  font-size: .875rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .project-card-featured {
@@ -697,8 +711,8 @@ img {
 }
 
 .article-body h2::before {
-  width: 1.55rem;
-  margin-bottom: .45rem;
+  inset-block-start: .12em;
+  height: .96em;
 }
 
 .article-body p + p {
