@@ -376,7 +376,8 @@ img {
   font-size: clamp(1.15rem, 2.1vw, 1.6rem);
 }
 
-.project-card-copy > p:last-of-type {
+.project-card-copy > p:last-of-type,
+.project-card-copy > .project-summary {
   color: var(--body);
   font-size: .975rem;
 }
@@ -386,6 +387,13 @@ img {
   color: var(--muted);
   font-size: .875rem;
   font-variant-numeric: tabular-nums;
+}
+
+.project-card-copy > .project-skills {
+  margin-top: .9rem;
+  padding-left: .75rem;
+  border-left: 2px solid var(--accent);
+  font-size: .875rem;
 }
 
 .project-card-featured {
@@ -407,6 +415,14 @@ img {
 .project-card-featured .project-image img {
   aspect-ratio: auto;
   object-fit: contain;
+}
+
+.project-card-featured .response-composite {
+  display: grid;
+  grid-template-columns: minmax(0, 1.475fr) minmax(0, 1fr);
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem;
 }
 
 .project-card-featured h3 {
@@ -816,6 +832,11 @@ img {
   .project-card-featured .project-link {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .project-card-featured .response-composite {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
   }
 
   .section-pair {
