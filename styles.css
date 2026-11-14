@@ -418,12 +418,16 @@ img {
   object-fit: contain;
 }
 
-.project-card-featured .response-composite {
+.project-card-featured .project-image-pair {
   display: grid;
-  grid-template-columns: minmax(0, 1.475fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, var(--first-image-width, 1.475fr)) minmax(0, 1fr);
   align-items: center;
   gap: .75rem;
   padding: .75rem;
+}
+
+.attitude-composite {
+  --first-image-width: .546fr;
 }
 
 .project-card-featured h3 {
@@ -835,7 +839,7 @@ img {
     gap: 0;
   }
 
-  .project-card-featured .response-composite {
+  .project-card-featured .project-image-pair {
     grid-template-columns: minmax(0, 1fr);
     gap: 1rem;
   }
