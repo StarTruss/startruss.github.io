@@ -342,6 +342,29 @@ img {
   font-size: .9rem;
 }
 
+.project-card-featured {
+  grid-column: 1 / -1;
+}
+
+.project-card-featured .project-link {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.project-card-featured .project-image {
+  border-bottom: 0;
+}
+
+.project-card-featured h3 {
+  font-size: clamp(1.35rem, 2.65vw, 2.25rem);
+}
+
+.project-results {
+  margin-top: 1.2rem;
+}
+
 .card-arrow, .entry-arrow {
   color: var(--green);
   font-family: var(--mono);
@@ -643,6 +666,11 @@ img {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 1.3rem;
+  }
+
+  .project-card-featured .project-link {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .section-pair {

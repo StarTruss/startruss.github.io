@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="用地面试验和动力学仿真研究空间展开骨架，改善展开同步性并降低末端锁定冲击。">
+  <link rel="canonical" href="https://startruss.github.io/deployment-optimization.html">
+  <link rel="stylesheet" href="styles.css">
+  <title>空间展开骨架的同步性与锁定冲击优化 · 星桁</title>
+</head>
+<body id="top">
+  <a class="skip-link" href="#content">跳到正文</a>
+  <header class="site-header">
+    <div class="shell nav-shell">
+      <a class="brand" href="index.html" aria-label="星桁首页">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>星桁 <span class="brand-en">STAR TRUSS</span></span>
+      </a>
+      <nav class="nav-links" lang="en" aria-label="Primary navigation">
+        <a href="index.html#work">Projects</a>
+        <a href="index.html#now">Current Work</a>
+        <a href="index.html#thinking">Perspectives</a>
+        <a href="index.html#years">Annual Notes</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell article" id="content">
+    <a class="back-link" href="index.html#work">← 返回代表项目</a>
+    <header class="article-header">
+      <p class="eyebrow">博士阶段 · 空间展开机构</p>
+      <h1>空间展开骨架的同步性与锁定冲击优化</h1>
+      <p class="article-deck">让关节在展开中协调运动，在末端依次锁定。</p>
+    </header>
+
+    <div class="article-body">
+      <section aria-labelledby="problem">
+        <h2 id="problem">工程问题</h2>
+        <p>骨架要把折起的遮光薄膜撑开。关节转角相差太大，杆件可能相碰。展开到位时，多个关节若同时锁定，冲击可能叠加。</p>
+      </section>
+      <section aria-labelledby="contribution">
+        <h2 id="contribution">我的贡献</h2>
+        <p>我参与研究构思，整理试验数据、分析展开过程，并在绳轮建模研究中实现计算程序。两篇论文均由我担任第一作者。</p>
+      </section>
+      <section aria-labelledby="approach">
+        <h2 id="approach">方案与取舍</h2>
+        <p>先用试验数据建立拉索经过滑轮时的传力模型，再比较不同的弹簧预载和拉索预张力组合。选出的方案让关节在展开中转角更接近，临近终点时略微错开锁定，以分散冲击。</p>
+      </section>
+      <section aria-labelledby="results">
+        <h2 id="results">验证与结果</h2>
+        <p>带薄膜的小比例样机在地面对照试验中，<strong>平均角度偏差从 1.73° 降至 1.04°</strong>。全尺寸模型经地面试验校核，仿真显示<strong>最大锁定冲击力矩下降 8.27%</strong>，平均锁定冲击略有上升。</p>
+        <figure class="article-figure project-results">
+          <img src="skeleton-results.webp" width="1200" height="750" alt="基准与优化方案比较。地面试验平均角度偏差从 1.73° 降到 1.04°。全尺寸模型仿真最大锁定冲击力矩从 263.55 降到 241.76 牛米。" loading="lazy">
+          <figcaption>数据来自学位论文图 4-26 和展开同步优化论文表 8。</figcaption>
+        </figure>
+      </section>
+      <section class="article-tail" aria-labelledby="papers">
+        <h2 id="papers">相关论文</h2>
+        <ul>
+          <li><a href="https://doi.org/10.1016/j.rineng.2025.106915"><span lang="en">Element-free rope pulley calculations: Advancing deployable skeleton performance optimization</span></a> · <cite lang="en">Results in Engineering</cite>，2025</li>
+          <li><a href="https://doi.org/10.1016/j.ast.2026.113647"><span lang="en">Deploying in concert: Transient-dynamics-driven synchronization optimization for the deployable skeleton</span></a> · <cite lang="en">Aerospace Science and Technology</cite>，2026 年在线发表</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-shell"><a href="index.html">星桁 · Star Truss</a><a href="#top">回到顶部 ↑</a></div>
+  </footer>
+</body>
+</html>
