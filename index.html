@@ -6,7 +6,7 @@
   <meta name="description" content="星桁的个人主页。空间展开机构、动力学建模、试验验证，以及一名机构工程师的年度记录。">
   <meta name="theme-color" content="#f7f8fa">
   <link rel="canonical" href="https://startruss.github.io/">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=project-videos">
   <title>星桁 · Star Truss | 机构工程师</title>
 </head>
 <body id="top">
@@ -54,11 +54,15 @@
         <p>从展开机构设计、动力学建模，到样机试验和模型修正。</p>
       </div>
       <div class="project-grid">
-        <article class="project-card project-card-featured">
+        <article class="project-card project-card-featured project-feature-layout">
+          <div class="project-image project-deployment-media">
+            <img src="skeleton-mechanism.webp" alt="空间展开骨架的连杆、铰链和压紧释放装置示意图" width="1400" height="567" loading="lazy">
+            <video class="project-video" controls playsinline preload="none" poster="full-scale-deployment.webp" width="736" height="1080" aria-label="全尺寸串并联骨架展开仿真">
+              <source src="full-scale-deployment.mp4" type="video/mp4">
+              <a href="full-scale-deployment.mp4">查看骨架展开视频</a>
+            </video>
+          </div>
           <a class="project-link" href="deployment-optimization.html" aria-labelledby="skeleton-title" aria-describedby="skeleton-period">
-            <div class="project-image">
-              <img src="skeleton-mechanism.webp" alt="" width="1400" height="567" loading="lazy">
-            </div>
             <div class="project-card-copy">
               <p class="eyebrow">空间可展开结构 / 瞬态动力学 / 展开同步 / 多目标优化</p>
               <h3 id="skeleton-title">空间展开骨架的同步性与锁定冲击优化</h3>
@@ -70,7 +74,7 @@
           </a>
         </article>
         <article class="project-card project-card-featured">
-          <a class="project-link" href="https://doi.org/10.1016/j.ast.2025.110170" aria-labelledby="response-title response-paper" aria-describedby="response-period">
+          <a class="project-link project-feature-layout" href="https://doi.org/10.1016/j.ast.2025.110170" aria-labelledby="response-title response-paper" aria-describedby="response-period">
             <div class="project-image project-image-pair">
               <img src="response-method.png" width="1559" height="887" alt="动态响应重构的方法流程，包括数据预处理、LSTM 模型训练、参数优化与响应预测。" loading="lazy">
               <img src="response-structure.png" width="832" height="698" alt="桁架结构模型及激励点、测量点、响应外推点和局部弹性模量退化位置。" loading="lazy">
@@ -86,7 +90,7 @@
           </a>
         </article>
         <article class="project-card project-card-featured">
-          <a class="project-link" href="https://aca.spacejournal.cn/article/doi/10.3969/j.issn.1674-1579.2024.01.008" aria-labelledby="attitude-title" aria-describedby="attitude-period">
+          <a class="project-link project-feature-layout" href="https://aca.spacejournal.cn/article/doi/10.3969/j.issn.1674-1579.2024.01.008" aria-labelledby="attitude-title" aria-describedby="attitude-period">
             <div class="project-image project-image-pair attitude-composite">
               <img src="attitude-spacecraft.png" width="513" height="286" alt="卫星平台与太阳翼的三维模型" loading="lazy">
               <img src="attitude-flexible-wing.png" width="996" height="303" alt="星本体、铰链和挠性太阳翼的连接示意图" loading="lazy">
@@ -100,6 +104,20 @@
               <span class="card-arrow" aria-hidden="true">↗</span>
             </div>
           </a>
+        </article>
+        <article class="project-card project-card-featured project-feature-layout" aria-labelledby="solar-array-tracking-title">
+          <div class="project-image">
+            <video class="project-video" controls playsinline preload="none" poster="solar-array-tracking.webp" width="1280" height="720" aria-label="太阳翼局部视频的无标记点跟踪动画">
+              <source src="solar-array-tracking.mp4" type="video/mp4">
+              <a href="solar-array-tracking.mp4">查看太阳翼跟踪动画</a>
+            </video>
+          </div>
+          <div class="project-card-copy">
+            <p class="eyebrow">非接触测量 / 无标记点跟踪 / 光照特性 / 模态辨识</p>
+            <h3 id="solar-array-tracking-title">局部视觉与驱动遥测协同的太阳翼动力学辨识及扰动响应预测</h3>
+            <p class="project-summary">从太阳翼局部视频中跟踪翼面纹理和角点，提取多测点的像素位移，并通过频谱和分段对照筛选可能的振动形态。这些视觉观测可为后续结合驱动遥测开展太阳翼动力学辨识和扰动响应预测提供数据。</p>
+            <p class="project-skills"><strong>技能：</strong>单目视觉测量、KLT 光流跟踪、多点频谱分析</p>
+          </div>
         </article>
         <article class="project-card">
           <a class="project-link" href="film.html" aria-labelledby="film-title">
