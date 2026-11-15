@@ -439,7 +439,7 @@ img {
 
 .project-deployment-media {
   display: grid;
-  grid-template-columns: minmax(0, 69fr) minmax(0, 31fr);
+  grid-template-columns: minmax(0, 72.4fr) minmax(0, 27.6fr);
   grid-template-rows: minmax(0, 1fr);
   align-items: center;
   aspect-ratio: 1400 / 567;
@@ -447,7 +447,39 @@ img {
 
 .project-deployment-media .project-video {
   height: 100%;
+  background: var(--white);
   object-fit: contain;
+}
+
+.project-tracking-card {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+}
+
+.project-tracking-card .project-card-copy {
+  padding-right: 0;
+}
+
+.project-tracking-card h3 {
+  text-wrap: wrap;
+}
+
+.project-tracking-card h3 span {
+  white-space: nowrap;
+}
+
+.project-papers {
+  display: grid;
+  gap: .25rem;
+  margin: .85rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: .875rem;
+}
+
+.project-papers a {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: .2em;
 }
 
 .attitude-composite {
