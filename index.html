@@ -6,7 +6,7 @@
   <meta name="description" content="星桁的个人主页。空间展开机构、动力学建模、试验验证，以及一名机构工程师的年度记录。">
   <meta name="theme-color" content="#080d17">
   <link rel="canonical" href="https://startruss.github.io/">
-  <link rel="stylesheet" href="styles.css?v=white-figures-20261116">
+  <link rel="stylesheet" href="styles.css?v=featured-project-figures">
   <title>星桁 · Star Truss | 机构工程师</title>
 </head>
 <body id="top">
@@ -57,11 +57,14 @@
       <div class="project-grid">
         <article class="project-card project-card-featured project-feature-layout" aria-labelledby="skeleton-title">
           <div class="project-image project-deployment-media">
-            <img src="skeleton-mechanism.webp" alt="空间展开骨架的连杆、铰链和压紧释放装置示意图" width="1400" height="567" loading="lazy">
-            <video class="project-video" controls playsinline preload="none" poster="full-scale-deployment.webp" width="736" height="1080" aria-label="全尺寸串并联骨架展开仿真">
-              <source src="full-scale-deployment.mp4" type="video/mp4">
-              <a href="full-scale-deployment.mp4">查看骨架展开视频</a>
-            </video>
+            <img src="skeleton-folded-render.webp" alt="空间展开骨架的收拢构型，标注压紧释放装置、四连杆、球铰和底座" width="1340" height="802" loading="lazy">
+            <div class="project-deployment-player">
+              <video id="deployment-video" class="project-video" controls playsinline preload="none" poster="skeleton-deployment-poster.webp" width="736" height="1080" aria-label="全尺寸串并联骨架展开仿真">
+                <source src="full-scale-deployment.mp4" type="video/mp4">
+                <a href="full-scale-deployment.mp4">查看骨架展开视频</a>
+              </video>
+              <button id="deployment-play" class="deployment-play" type="button" aria-controls="deployment-video" hidden><span aria-hidden="true">▶</span> 播放展开过程</button>
+            </div>
           </div>
           <div class="project-card-copy">
             <p class="eyebrow">空间可展开结构 / 瞬态动力学 / 展开同步 / 多目标优化</p>
@@ -76,9 +79,8 @@
           </div>
         </article>
         <article class="project-card project-card-featured project-feature-layout" aria-labelledby="response-title">
-          <div class="project-image project-image-pair">
-            <img src="response-method.png" width="1559" height="887" alt="动态响应重构的方法流程，包括数据预处理、LSTM 模型训练、参数优化与响应预测。" loading="lazy">
-            <img src="response-structure.png" width="832" height="698" alt="桁架结构模型及激励点、测量点、响应外推点和局部弹性模量退化位置。" loading="lazy">
+          <div class="project-image">
+            <img src="response-reconstruction-summary.webp" width="1961" height="802" alt="动态响应重构流程：采集少量测点的振动，更新模型并重构响应，估算未测位置的振动。桁架图标注激励点、实测点、外推点、固定约束和弹性模量退化区。" loading="lazy">
           </div>
           <div class="project-card-copy">
             <p class="eyebrow">变模态结构 / 伴随灵敏度 / 贝叶斯优化 LSTM / 响应重构</p>
@@ -241,5 +243,22 @@
       <a href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
     </div>
   </footer>
+  <script>
+    const deploymentVideo = document.getElementById("deployment-video");
+    const deploymentPlay = document.getElementById("deployment-play");
+
+    deploymentPlay.addEventListener("click", () => {
+      const moveFocus = document.activeElement === deploymentPlay;
+      deploymentVideo.controls = true;
+      deploymentPlay.hidden = true;
+      if (moveFocus) deploymentVideo.focus({ preventScroll: true });
+      deploymentVideo.play().catch(() => {
+        // The native controls remain available if immediate playback fails.
+      });
+    });
+
+    deploymentVideo.controls = false;
+    deploymentPlay.hidden = false;
+  </script>
 </body>
 </html>
