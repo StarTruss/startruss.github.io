@@ -127,6 +127,13 @@ img { display: block; max-width: 100%; height: auto; }
 .project-papers { display: grid; gap: .65rem; margin: 1.1rem 0 0; padding: 0; list-style: none; font-size: .9375rem; line-height: 1.8; }
 .project-papers a { color: var(--accent); text-decoration: underline; text-decoration-color: #4b6085; text-underline-offset: .25em; }
 .project-papers a:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
+.project-wheel-card > .project-card-copy { max-width: 65rem; padding: 0; text-align: left; }
+.project-wheel-card h3 { word-break: keep-all; overflow-wrap: anywhere; }
+.project-wheel-card .eyebrow span { white-space: nowrap; }
+.project-paper-citation { display: block; margin-top: .15rem; color: var(--muted); font-size: .875rem; }
+.project-wheel-media { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.project-wheel-media figure { display: flex; flex-direction: column; justify-content: center; padding: clamp(.65rem, 1.2vw, 1rem); }
+.project-wheel-media figcaption { padding-top: .65rem; color: #39465a; font-size: .875rem; text-align: center; }
 .attitude-composite { padding: 1rem; }
 .project-card-featured .attitude-composite img { width: 100%; aspect-ratio: 1370 / 522; object-fit: contain; }
 .card-arrow, .entry-arrow { color: var(--accent); font-family: var(--mono); font-size: 1.35rem; }
@@ -286,6 +293,7 @@ img { display: block; max-width: 100%; height: auto; }
   .attitude-composite { padding: .65rem; }
   .project-tracking-media { width: 100%; max-width: 480px; }
   .project-papers { font-size: .875rem; }
+  .project-wheel-media { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
   .card-arrow { top: 1.6rem; }
   .section-pair { grid-template-columns: 1fr; gap: 2rem; }
   .section-lead { font-size: 1rem; }
